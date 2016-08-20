@@ -280,17 +280,6 @@ WHILE @i < @count_quote_items DO
 
 	SELECT @last_insert AS `New Order Item ID`;
 
-
-
-	####################################################
-	###  Set SiteFinity ID back to 0 for this order  ###
-	####################################################
-	UPDATE sales_flat_order
-	SET sitefinity_id = 0
-	WHERE sitefinity_id = -102
-	AND entity_id = @order_id;
-
-
 	SET @i = @i + 1;
 
 	#SELECT @i;
